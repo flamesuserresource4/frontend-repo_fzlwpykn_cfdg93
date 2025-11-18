@@ -1,71 +1,34 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import MenuGrid from './components/MenuGrid';
+import CTA from './components/CTA';
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
-
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
+    <div className="min-h-screen bg-white text-pink-900">
+      <Navbar />
+      <Hero />
+      <MenuGrid />
+      <CTA />
+      <footer id="contact" className="border-t border-pink-100 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div>
+            <h4 className="font-semibold text-pink-800">Boba & Bites</h4>
+            <p className="text-sm text-pink-900/70 mt-2">Sweet drinks and snacks made daily. Come say hi!</p>
           </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
-            </div>
+          <div>
+            <h5 className="font-semibold text-pink-800 mb-2">Hours</h5>
+            <p className="text-sm text-pink-900/70">Mon–Fri: 10am–8pm</p>
+            <p className="text-sm text-pink-900/70">Sat–Sun: 11am–9pm</p>
           </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
+          <div>
+            <h5 className="font-semibold text-pink-800 mb-2">Find us</h5>
+            <p className="text-sm text-pink-900/70">123 Sweet St, Dessert City</p>
+            <p className="text-sm text-pink-900/70">(123) 456-7890</p>
           </div>
         </div>
-      </div>
+        <div className="text-center text-xs text-pink-900/50 py-4">© {new Date().getFullYear()} Boba & Bites — All rights reserved.</div>
+      </footer>
     </div>
   )
 }
